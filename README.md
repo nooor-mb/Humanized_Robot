@@ -1,16 +1,19 @@
  # Humanized_Robot
 
+
 # Overview
 
 This is a robotics project I built using Arduino. The robot can move forward when the ON/OFF button is pressed, detect obstacles with an ultrasonic sensor, speak using the VHM-314 SOP16 module, and rotate its head using a joystick-controlled servo. The project focuses on integrating electronics, sensors, motors, and simple mechanical movement in a beginner-friendly robotic system.
+
 
 # Purpose of the Project
 
 The purpose of this project was to design and build a simple robotic system that demonstrates basic movement, obstacle detection, and human-robot interaction through sound and head rotation. It helped me learn wiring, Arduino programming, mechanical design limitations, and module integration.
 
+
 # Project Outcomes
 
-A functioning robot capable of forward movement
+Achieved controlled movement using an ON/OFF button.
 
 Obstacle detection using ultrasonic sensor
 
@@ -18,9 +21,6 @@ Speech output using VHM-314 module + 3W speaker
 
 Manual head rotation control using a joystick
 
-Button-controlled movement for safe operation
-
-Understanding of mechanical challenges, wiring management, and module communication
 
 # Features
 
