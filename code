@@ -1,18 +1,34 @@
-#include <Servo.h>
+#include <Servo.h>  
+// Includes the Servo library so we can control servo motors
 
+// Creating servo objects for each motor
 Servo leftLeg, rightLeg, leftArm, rightArm, head;
+
+// Pin numbers for each servo
 const int leftLegPin = 9;
 const int rightLegPin = 10;
 const int leftArmPin = 7;
 const int rightArmPin = 6;
 const int headPin = 5;
+
+// Joystick X-axis pin
 const int joyXPin = A0;
+
+// Button pin for ON/OFF walking
 const int buttonPin = 2;
+
+// Variables to track walking state
 bool isWalking = false;
 int lastButtonState = HIGH;
+
 void setup() {
-  Serial.begin(9600);
+  Serial.begin(9600);  
+  // Start Serial Monitor for debugging
+
   pinMode(buttonPin, INPUT_PULLUP);
+  // Button uses internal pull-up for stable reading
+
+  // Attach each servo to its pin
   leftLeg.attach(leftLegPin);
   rightLeg.attach(rightLegPin);
   leftArm.attach(leftArmPin);
@@ -21,41 +37,82 @@ void setup() {
 
   Serial.println("Ready! Press button to toggle walking.");
 }
+
 void loop() {
-  // Button check
+
+  // ---------------------------
+  // CHECK BUTTON FOR WALKING
+  // ---------------------------
   int buttonState = digitalRead(buttonPin);
+
+  // Detect button press (LOW = pressed)
   if (buttonState == LOW && lastButtonState == HIGH) {
-    isWalking = !isWalking;
+    isWalking = !isWalking;  
+    // Toggle walking ON/OFF
+
     Serial.print("Walking: ");
     Serial.println(isWalking ? "ON" : "OFF");
-    delay(300); // debounce
+
+    delay(300);  
+    // Debounce delay to avoid double-pressing
   }
+
   lastButtonState = buttonState;
-  // Head joystick control
-  int joyX = analogRead(joyXPin);
-  int headAngle = map(joyX, 0, 1023, 0, 180);
-  head.write(headAngle);
+
+  // ---------------------------
+  // HEAD MOVEMENT USING JOYSTICK
+  // ---------------------------
+  int joyX = analogRead(joyXPin);  
+  // Joystick value 0–1023
+
+  int headAngle = map(joyX, 0, 1023, 0, 180);  
+  // Convert joystick range to servo angle
+
+  head.write(headAngle);  
+  // Move head servo
+
+  // ---------------------------
+  // WALKING OR IDLE MODE
+  // ---------------------------
   if (isWalking) {
-    walkCycle();
+    walkCycle();  
+    // Perform walking motion pattern
   } else {
-    neutralPose();
+    neutralPose();  
+    // Go back to neutral standing position
   }
 }
+
+
+// --------------------------------------
+// WALKING FUNCTION
+// Makes arms & legs swing back and forth
+// --------------------------------------
 void walkCycle() {
+  // Step 1 movement
   leftLeg.write(100);
   rightLeg.write(80);
   leftArm.write(70);
   rightArm.write(110);
   delay(500);
+
+  // Step 2 movement
   leftLeg.write(80);
   rightLeg.write(100);
   leftArm.write(110);
   rightArm.write(70);
   delay(500);
 }
+
+
+// --------------------------------------
+// NEUTRAL POSITION FUNCTION
+// Puts everything at rest = 90 degrees
+// --------------------------------------
 void neutralPose() {
   leftLeg.write(90);
   rightLeg.write(90);
   leftArm.write(90);
   rightArm.write(90);
-}  this the code i have now i need to make him to walk to make him put his right leg in first and then his left by a difrence less than a second 
+  // head stays joystick-controlled
+}
