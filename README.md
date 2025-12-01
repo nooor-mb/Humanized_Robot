@@ -1,14 +1,14 @@
  # Humanized_Robot
 
-Overview
+# Overview
 
 This is a robotics project I built using Arduino. The robot can move forward when the ON/OFF button is pressed, detect obstacles with an ultrasonic sensor, speak using the VHM-314 SOP16 module, and rotate its head using a joystick-controlled servo. The project focuses on integrating electronics, sensors, motors, and simple mechanical movement in a beginner-friendly robotic system.
 
-Purpose of the Project
+# Purpose of the Project
 
 The purpose of this project was to design and build a simple robotic system that demonstrates basic movement, obstacle detection, and human-robot interaction through sound and head rotation. It helped me learn wiring, Arduino programming, mechanical design limitations, and module integration.
 
-Project Outcomes
+# Project Outcomes
 
 A functioning robot capable of forward movement
 
@@ -22,7 +22,7 @@ Button-controlled movement for safe operation
 
 Understanding of mechanical challenges, wiring management, and module communication
 
-Features
+# Features
 
 Manual Movement: Robot moves only when the start button is pressed.
 
@@ -34,46 +34,37 @@ Rotating Head: Joystick controls servo rotation of the robot's head.
 
 Controlled System: No automatic behavior—user controls all actions.
 
-Setup Instructions
-Hardware Setup
+# Setup Instructions
 
-Connect motors to the motor driver (L298N or equivalent).
+Technical Components Used
 
-Wire the ultrasonic sensor to trigger/echo pins on Arduino.
+Arduino board
 
-Connect joystick module to analog pins (A0, A1).
+Ultrasonic sensor (for distance measurement)
 
-Attach servo motor for head movement.
+Motors 
 
-Connect the VHM-314 voice module to Arduino using serial pins.
+ON/OFF button
 
-Wire the ON/OFF button to a digital input pin.
+Joystick module for head rotation
 
-Power the robot with a 7.4V battery or similar.
+Wires, breadboard, battery
 
-Follow your wiring diagram to assemble everything correctly.
+Basic frame and legs (manual structure)
 
-Software Setup
+
+
+# Software Setup
 
 Install Arduino IDE.
 
-Install required libraries if needed (Servo.h, SoftwareSerial.h).
-
-Open your .ino files:
-
-Robot_Control.ino
-
-Sensor_Module.ino
-
-Head_Control.ino
-
-Speech_Module.ino
+Install required libraries (Servo.h, SoftwareSerial.h).
 
 Select board type (e.g., Arduino Uno) and correct COM port.
 
 Upload all the code to the Arduino.
 
-Usage Instructions
+# Usage Instructions
 Start Movement
 
 Press the ON/OFF button
@@ -104,70 +95,8 @@ Robot immediately stops
 
 Replication of the Project
 
-To replicate this robot:
 
-Download the entire repository including code, diagrams, and photos.
-
-Print or assemble the frame (if using 3D printed parts).
-
-Follow wiring diagrams to attach motors, sensors, joystick, button, and speaker.
-
-Upload the Arduino code from the Arduino_Code folder.
-
-Mount all components securely on the robot frame.
-
-Connect battery power and start testing movement, obstacle sensing, and head rotation.
-
-Adjust wiring, sensors, and mechanical components as needed.
-
-This ensures the robot works the same way as the original.
-
-Functions and Methods
-moveForward()
-
-Moves the robot forward when the start button is pressed.
-
-stopMotors()
-
-Stops all movement when an obstacle is detected or button is off.
-
-readDistance()
-
-Reads ultrasonic sensor value.
-
-speak(message)
-
-Plays audio through VHM-314 module.
-
-readJoystick()
-
-Reads joystick input to rotate the head servo.
-
-checkStartButton()
-
-Reads button state to start/stop the robot.
-
-File Format
-
-.ino files for Arduino
-
-.jpg photos of the robot
-
-.png / .pdf wiring diagrams
-
-.stl for any 3D printed parts
-
-Input Validation
-
-Debounce logic for button
-
-Filtering and stabilization for ultrasonic readings
-
-Smoothing joystick input to avoid shaky servo movement
-
-Checking valid audio message numbers for VHM-314 module
-
-Outputs and Test Cases
+# Outputs and Test Cases
 Test 1: Start Movement
 
 Input: Press button
@@ -193,7 +122,7 @@ Test 5: Stop Robot
 Input: Press button again
 Expected: Robot stops
 
-Issues Faced
+# Issues Faced
 1. Leg Mechanism Not Moving
 
 The leg mechanism did not work as intended (no walking motion).
@@ -205,17 +134,7 @@ High joint friction
 
 Poor alignment of leg parts
 
-2. Robot Could Not Move Freely Due to Wiring
-
-Movement was restricted because:
-
-Many wires tangled during motion
-
-Arduino, breadboard, and modules added heavy weight
-
-Components were not fully fixed in stable positions
-
-3. Leg Design Problems
+2. Leg Design Problems
 
 Structure could not handle weight
 
@@ -225,6 +144,17 @@ Legs not balanced, causing the robot to tilt or get stuck
 
 These issues prevented proper leg movement and natural motion.
 
-Final Notes
+3. Robot Could Not Move Freely Due to Wiring
 
-This project gave me hands-on experience in robotics, wiring, Arduino programming, servo control, ultrasonic sensing, and integrating a voice module. Even though the leg mechanism and wiring created movement difficulties, the robot successfully demonstrated button-controlled motion, obstacle detection, head rotation, and audio output.
+Movement was restricted because:
+
+Many wires tangled during motion
+
+Arduino, breadboard, and modules added heavy weight
+
+Components were not fully fixed in stable positions
+
+
+# Conclusion
+
+This project introduced the fundamental concepts of robotics, including sensor control, manual movement activation, and mechanical design. Although the robot faced challenges such as leg movement limitations and wiring interference, it still demonstrated successful obstacle detection and head rotation through a joystick. The project helped build a strong understanding of Arduino-based control systems and provided a clear path for future improvements in design and motion mechanics.
