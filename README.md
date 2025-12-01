@@ -99,6 +99,9 @@ Replication of the Project
 # Photos and Schematics
 <img width="498" height="539" alt="image" src="https://github.com/user-attachments/assets/fa0dc5b1-1e87-4f8b-bc67-8b8ef82b625f" />
 
+# 3D Model
+<img width="498" height="539" alt="image" src="https://github.com/user-attachments/assets/94459c26-f447-4ee0-a62b-7e9b594d1ef3" />
+
 
 # Outputs and Test Cases
 Test 1: Start Movement
