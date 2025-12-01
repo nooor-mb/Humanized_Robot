@@ -1,4 +1,5 @@
  # Humanized_Robot
+ team members: Noor, Aidena, Asel
 
 
 # Overview
@@ -121,6 +122,11 @@ Test 5: Stop Robot
 
 Input: Press button again
 Expected: Robot stops
+
+# Photos and Schematics
+<img width="498" height="539" alt="image" src="https://github.com/user-attachments/assets/fa0dc5b1-1e87-4f8b-bc67-8b8ef82b625f" />
+
+
 
 # Issues Faced
 1. Leg Mechanism Not Moving
