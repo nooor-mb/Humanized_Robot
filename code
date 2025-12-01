@@ -1,1 +1,61 @@
-ide
+#include <Servo.h>
+
+Servo leftLeg, rightLeg, leftArm, rightArm, head;
+const int leftLegPin = 9;
+const int rightLegPin = 10;
+const int leftArmPin = 7;
+const int rightArmPin = 6;
+const int headPin = 5;
+const int joyXPin = A0;
+const int buttonPin = 2;
+bool isWalking = false;
+int lastButtonState = HIGH;
+void setup() {
+  Serial.begin(9600);
+  pinMode(buttonPin, INPUT_PULLUP);
+  leftLeg.attach(leftLegPin);
+  rightLeg.attach(rightLegPin);
+  leftArm.attach(leftArmPin);
+  rightArm.attach(rightArmPin);
+  head.attach(headPin);
+
+  Serial.println("Ready! Press button to toggle walking.");
+}
+void loop() {
+  // Button check
+  int buttonState = digitalRead(buttonPin);
+  if (buttonState == LOW && lastButtonState == HIGH) {
+    isWalking = !isWalking;
+    Serial.print("Walking: ");
+    Serial.println(isWalking ? "ON" : "OFF");
+    delay(300); // debounce
+  }
+  lastButtonState = buttonState;
+  // Head joystick control
+  int joyX = analogRead(joyXPin);
+  int headAngle = map(joyX, 0, 1023, 0, 180);
+  head.write(headAngle);
+  if (isWalking) {
+    walkCycle();
+  } else {
+    neutralPose();
+  }
+}
+void walkCycle() {
+  leftLeg.write(100);
+  rightLeg.write(80);
+  leftArm.write(70);
+  rightArm.write(110);
+  delay(500);
+  leftLeg.write(80);
+  rightLeg.write(100);
+  leftArm.write(110);
+  rightArm.write(70);
+  delay(500);
+}
+void neutralPose() {
+  leftLeg.write(90);
+  rightLeg.write(90);
+  leftArm.write(90);
+  rightArm.write(90);
+}  this the code i have now i need to make him to walk to make him put his right leg in first and then his left by a difrence less than a second 
