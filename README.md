@@ -102,7 +102,9 @@ Replication of the Project
 
 # 3D Model
 
-<img width="400" height="400" alt="Screenshot 2025-12-02 163617" src="https://github.com/user-attachments/assets/96f0e661-ebfb-4acc-99fc-a338fe766f2a" /> <img width="400" height="500" alt="Screenshot 2025-12-02 163628" src="https://github.com/user-attachments/assets/90d36a9d-0adf-4393-95ad-312b06f44f36" /> <img width="400" height="500" alt="Screenshot 2025-12-02 163641" src="https://github.com/user-attachments/assets/e9d559ea-98b2-4b91-b743-cb0b2062bdd9" />
+<img width="400" height="400" alt="Screenshot 2025-12-02 163617" src="https://github.com/user-attachments/assets/96f0e661-ebfb-4acc-99fc-a338fe766f2a" /> <img width="400" height="400" alt="Screenshot 2025-12-02 163628" src="https://github.com/user-attachments/assets/90d36a9d-0adf-4393-95ad-312b06f44f36" /> <img width="400" height="400" alt="Screenshot 2025-12-02 163641" src="https://github.com/user-attachments/assets/e9d559ea-98b2-4b91-b743-cb0b2062bdd9" />
+
+
 link for the 3d model on fussion 360 :
 https://a360.co/3K4YlJO 
 
