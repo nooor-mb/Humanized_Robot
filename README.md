@@ -9,8 +9,7 @@ This is a robotics project I built using Arduino. The robot can move forward whe
 
 # Purpose of the Project
 
-The purpose of this project was to design and build a simple robotic system that demonstrates basic movement, obstacle detection, and human-robot interaction through sound and head rotation. It helped me learn wiring, Arduino programming, mechanical design limitations, and module integration.
-
+The purpose of this project was to design and build a simple robotic system that demonstrates basic movement, obstacle detection, and human-robot interaction through sound and head rotation. 
 
 # Project Outcomes
 
