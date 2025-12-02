@@ -96,14 +96,13 @@ Robot immediately stops
 Replication of the Project
 
 # Photos and Schematics
-<img width="498" height="539" alt="image" src="https://github.com/user-attachments/assets/fa0dc5b1-1e87-4f8b-bc67-8b8ef82b625f" />
-<img width="576" height="1280" alt="image" src="https://github.com/user-attachments/assets/0893c1d5-2f75-4133-af5e-7dcd0a5c7797" />
+<img width="498" height="539" alt="image" src="https://github.com/user-attachments/assets/fa0dc5b1-1e87-4f8b-bc67-8b8ef82b625f" /> <img width="576" height="1280" alt="image" src="https://github.com/user-attachments/assets/0893c1d5-2f75-4133-af5e-7dcd0a5c7797" />
 
 
 # 3D Model
-<img width="704" height="536" alt="Screenshot 2025-12-02 154841" src="https://github.com/user-attachments/assets/ebd5dc0e-c74e-4d47-b46c-7a0aefc313b8" />
-<img width="769" height="697" alt="Screenshot 2025-12-02 163617" src="https://github.com/user-attachments/assets/96f0e661-ebfb-4acc-99fc-a338fe766f2a" />
-<img width="539" height="552" alt="Screenshot 2025-12-02 163628" src="https://github.com/user-attachments/assets/90d36a9d-0adf-4393-95ad-312b06f44f36" />
+
+<img width="769" height="697" alt="Screenshot 2025-12-02 163617" src="https://github.com/user-attachments/assets/96f0e661-ebfb-4acc-99fc-a338fe766f2a" /> <img width="539" height="552" alt="Screenshot 2025-12-02 163628" src="https://github.com/user-attachments/assets/90d36a9d-0adf-4393-95ad-312b06f44f36" /> <img width="586" height="708" alt="Screenshot 2025-12-02 163641" src="https://github.com/user-attachments/assets/e9d559ea-98b2-4b91-b743-cb0b2062bdd9" />
+
 
 
 
